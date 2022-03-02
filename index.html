@@ -12,8 +12,8 @@
 <body class="bg-black text-white flex">
 
     <header class="w-full">
-        <nav class="flex flex-row h-16 px-14 w-full">
-                <div class="justify-start flex flex row text-sm">
+        <nav class="flex flex-row h-16 px-14 w-full justify-between">
+                <section class="flex flex row text-sm hidden xl:flex md:hidden">
                     <img class="h-16 mr-6" src="assets/img/Netflix-txt2.png" alt="Netflix-txt">
                     <div class="pt-6 pb-3 leading-none justify-center">
                         <a href="#" class="font-bold mr-6">Home</a>
@@ -23,13 +23,17 @@
                         <a href="#" class="mr-6">My list</a>
                         <a href="#" class="mr-6">Watch Again</a>
                     </div>            
-                </div>
+                </section>
+
+                <img class="h-16 mr-6 align-center items-center hidden md:flex" src="assets/img/Netflix-txt2.png" alt="Netflix-txt">
                 
-                <div class="justify-end flex flex row text-sm">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <i class="fa-solid fa-gift"></i>
-                    <i class="fa-solid fa-bell"></i>      
-                </div>
+                <section class="flex flex row text-sm pt-6 pb-3 items-center hidden xl:flex md:hidden">
+                    <a href=""><i class="fa-solid fa-magnifying-glass pr-10"></i></a>
+                    <a href=""><i class="fa-solid fa-gift pr-10"></i></a>
+                    <a href=""><i class="fa-solid fa-bell pr-10"></i></a>
+                    <a href=""><img class="w-10 h-10 justify-center rounded-sm"  src="assets/img/pepo_happy.png" alt="peepo"></a>     
+                    <a href=""><i class='fas fa-angle-down pl-2 pr-10'></i></a>
+                </section>
         </nav>
     </header>
 

@@ -1,11 +1,3 @@
-// function goRight (container) {
-//     document.getElementById(container).scrollLeft += 304;
-//   };
-// function goLeft (container) {
-//     document.getElementById(container).scrollLeft -= 304;
-//   };
-
-
 const scrollto = (el, of) => {
        let sect = document.getElementById(el)
        console.log(sect.scrollLeft)
@@ -15,4 +7,87 @@ const scrollto = (el, of) => {
        })
 }
 
+function changeimg(idimg, srcimg){
+    let img = document.querySelector('.'+`${idimg}`);
+    img.src = srcimg
+}
 
+
+const listMylist = [
+
+]
+
+const listAnime = [
+
+]
+
+const listDocu = [
+
+]
+
+const imgDocu = [
+    './assets/img/image netflix/docu/arnaque.jpg',
+    './assets/img/image netflix/docu/catchingkillers.jpg',
+    './assets/img/image netflix/docu/college.jpg',
+    './assets/img/image netflix/docu/dontfuckwithcats.jpg',
+    './assets/img/image netflix/docu/formula1.jpg',
+    './assets/img/image netflix/docu/gims.jpg',
+    './assets/img/image netflix/docu/hitler.jpg',
+    './assets/img/image netflix/docu/jeffrey.jpg',
+    './assets/img/image netflix/docu/kanye.jpg',
+    './assets/img/image netflix/docu/rolling.jpg'
+]
+
+const imgAnime = [
+    './assets/img/image netflix/anime/baki.jpg',
+    './assets/img/image netflix/anime/blackbullet.webp',
+    './assets/img/image netflix/anime/bluethebeginning.jpg',
+    './assets/img/image netflix/anime/inazuma.webp',
+    './assets/img/image netflix/anime/pmomo.jpg',
+    './assets/img/image netflix/anime/saiki.webp',
+    './assets/img/image netflix/anime/sakamichi.webp',
+    './assets/img/image netflix/anime/skyhighsurvival.jpg',
+    './assets/img/image netflix/anime/wakfu.webp',
+    './assets/img/image netflix/anime/blackbutler.webp'
+]
+
+function randMath(maxNumber){
+    const mathrand = []
+    for (let i = 0; i < maxNumber; i++){
+        let rand = Math.floor(Math.random() * maxNumber)
+        if (!mathrand.includes(rand)){
+            mathrand.push(rand)
+        }
+        else{
+            i -= 1
+        }
+    }
+    return mathrand
+
+}
+
+function AllChangeImg(){
+    for (let i = 1; i< 11; i++){
+        listMylist.push('Mylist' + `${i}`)
+        listAnime.push('listAnime' + `${i}`)
+        listDocu.push('listDocu' + `${i}`)
+    }
+    const randomNumber = randMath(10);
+    for (let y = 0; y< 10; y++){
+        console.log(randomNumber[y])
+        let img = document.querySelector('.'+`${listAnime[y]}`)
+        console.log(`${imgAnime[randomNumber[y]]}`)
+        img.src = imgAnime[randomNumber[y]]
+        let img2 = document.querySelector('.'+`${listMylist[y]}`)
+        console.log(`${imgDocu[randomNumber[y]]}`)
+        img2.src = imgDocu[randomNumber[y]]
+        let img3 = document.querySelector('.'+`${listDocu[y]}`)
+        img3.src = imgDocu[y]
+}
+}
+
+
+
+AllChangeImg()
+
+console.log('coucou madame')

@@ -86,6 +86,18 @@ function AllChangeImg(){
 }
 }
 
+$(function () {
+    $(window).on("scroll", function () {
+      if ($(window).scrollTop() > 120) {
+        $("#navbar").css("backgroundColor", "black");
+      } else if ($(window).scrollTop() > 20) {
+        $("#navbar").css("backgroundColor", "#181818");
+      }
+      else {
+        $("#navbar").css("backgroundColor", "transparent");
+      }
+    });
+  });
 
 
 AllChangeImg()

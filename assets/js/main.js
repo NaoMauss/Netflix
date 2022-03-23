@@ -113,8 +113,22 @@ $(document).ready(function () {
         el.pause();
         $("#video").css("display", "none");
         $(".head-img").css("display", "block");
-    });
+    }); 
 });
+
+
+$(document).ready(function (){
+    $(".overf").css("overflow-y", "hidden");
+    $(".card").hover(function(){
+        $(".overf").css("overflow-y", "hidden");
+    },
+    function (){
+        $(".overf").css("overflow-y", "hidden");
+    })
+    
+    
+})
+
 
 AllChangeImg()
 

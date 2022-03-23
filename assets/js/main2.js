@@ -1,27 +1,16 @@
-console.log('je marche')
+$(document).ready(function () {
+    $("#video").css("display", "none"); //HIDE THE VIDEO INITIALLY
+    $(".thumbnail").hover(function () 
+            {
+            $(".head-img").css("display", "none");
+            $("#video").css("display", "block"); //SHOW THE VIDEO ON HOVER
+            $(this).children("video")[0].play();
+            }, 
 
-var bout = document.querySelector('.buttonright');
-
-bout.onclick = function(){
-    alert('test')
-}
-
-
-
-const listclass = [ "testimg1", "testimg2", "testimg3", "testimg4", "testimg5", "testimg6" ]
-const srcimg = './assets/img/pepo_happy.png'
-
-
-
-
-function changeimg(idimg, srcimg){
-    var img = document.querySelector('.'+`${idimg}`);
-    img.src = srcimg
-}
-
-for (let i = 0; i < listclass.length; i++){
-    changeimg(listclass[i], srcimg )
-}
-
-
-changeimg('testimg', null)
+    function () {
+        var el = $(this).children("video")[0];
+        el.pause();
+        $("#video").css("display", "none");
+        $(".head-img").css("display", "block");
+    });
+});
